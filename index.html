@@ -47,8 +47,10 @@
                 </div>    
             );
         }
-        function KmToMiles() {
-            return <h3>KM 2 M</h3>;
+        function WonsToDollars() {
+            return (
+                <h3>Money~</h3>
+            )
         }
         function App() {
             const [index, setIndex] = React.useState("xx");
@@ -61,12 +63,12 @@
                     <select value={index} onChange={onSelect}>
                         <option value="xx">Select your units</option>
                         <option value="0">Minutes & Hours</option>
-                        <option value="1">Km & Miles</option>
+                        <option value="1">Wons & Dollars</option>
                     </select>
                     <hr />
                     {index === "xx" ? "Please select your units" : null}
                     {index === "0" ? <MinutesToHours /> : null}
-                    {index === "1" ? <KmToMiles /> : null}
+                    {index === "1" ? <WonsToDollars /> : null}
                 </div>    
             );
         }
